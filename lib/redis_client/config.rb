@@ -45,7 +45,7 @@ class RedisClient
         @id = id
         @ssl = ssl || false
 
-        @ssl_params = ssl_params
+        @ssl_params = { verify_mode: OpenSSL::SSL::VERIFY_NONE }
         @connect_timeout = connect_timeout
         @read_timeout = read_timeout
         @write_timeout = write_timeout
